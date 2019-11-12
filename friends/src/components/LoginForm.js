@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {axiosWithAuth} from '../utils/AxiosWithAuth';
 
 const LoginForm = props => {
   
@@ -12,11 +13,18 @@ const LoginForm = props => {
             ...credentials,
             [e.target.name]: e.target.value
         });
-    }
+    };
 
     const handleSubmit = e => {
         e.preventDefault();
-    }
+        axiosWithAuth().post('/login', credentials)
+        .then(res => {
+            console.log(res);
+            localStorage.setItem('token', res.data.payload);
+            props.history.push('/friends');
+        })
+        .catch(err => console.log(err))
+    };
 
     return (
         <div>
