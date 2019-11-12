@@ -28,9 +28,12 @@ const Friends = () => {
     return (
         <div>
             <AddFriendsForm addFriend={addFriend} />
-            {friendsData.map(item => (
-                <FriendsCard item={item} key={item.id} />
-            ))}
+            <h2 className='friendsListHeader'>Friends List</h2>
+            <div className='list'>
+                {friendsData.map(item => (
+                    <FriendsCard item={item} key={item.id} />
+                ))}
+            </div>
         </div>
     )
 }

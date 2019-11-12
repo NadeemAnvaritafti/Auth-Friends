@@ -27,36 +27,39 @@ const LoginForm = props => {
     };
 
     return (
-        <div>
+        <div className='formDiv'>
             <h2>Login</h2>
 
             <form onSubmit={handleSubmit}>
 
-            <label>Username:
+            <div className='labelinput'>
+            <label htmlFor='username'>Username:</label>
                 <input
                     type="text" 
                     name="username"
+                    id="username"
                     placeholder="Username" 
                     value={credentials.username} 
                     onChange={handleChange} 
                     required 
                 />
-            </label>
+            </div>
 
-            <label>Password:
+            <div className='labelinput'>
+            <label htmlFor='password'>Password:</label>
                 <input
                     type="password" 
                     name="password"
+                    id="password"
                     placeholder="Password" 
                     value={credentials.password} 
                     onChange={handleChange} 
                     required 
-                />
-            </label>
-            <div>
-                <button type='submit'>Submit</button>
+                />    
             </div>
-
+    
+                <button type='submit'>Log In</button>
+            
         </form>
         </div>
     );

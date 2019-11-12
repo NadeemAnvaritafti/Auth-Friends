@@ -22,52 +22,61 @@ const AddFriendsForm = props => {
         .then(res => {
             console.log(res);
             props.addFriend();
+            setAddFriendData({
+                name: '',
+                age: '',
+                email: ''
+            });
         })
         .catch(err => console.log(err))
     };
 
     return (
-        <div>
+        <div className='formDiv'>
             <h2>Add A Friend</h2>
 
             <form onSubmit={handleSubmit}>
 
-            <label>Name:
+            <div className='labelinput'>
+            <label htmlFor='name'>Name:</label>
                 <input
                     type="text" 
                     name="name"
+                    id="name"
                     placeholder="Name" 
                     value={addFriendData.name} 
                     onChange={handleChange} 
                     required 
                 />
-            </label>
+            </div>
 
-            <label>Age:
+            <div className='labelinput'>
+            <label htmlFor='age'>Age:</label>
                 <input
                     type="number" 
                     name="age"
+                    id="age"
                     placeholder="Age" 
                     value={addFriendData.age} 
                     onChange={handleChange} 
                     required 
                 />
-            </label>
+            </div>
 
-            <label>Email:
+            <div className='labelinput labelinputlast'>
+            <label htmlFor='email'>Email:</label>
                 <input
                     type="text" 
                     name="email"
+                    id="email"
                     placeholder="Email" 
                     value={addFriendData.email} 
                     onChange={handleChange} 
                     required 
                 />
-            </label>
-
-            <div>
-                <button type='submit'>Submit</button>
             </div>
+            
+                <button type='submit'>Submit</button>
 
         </form>
         </div>

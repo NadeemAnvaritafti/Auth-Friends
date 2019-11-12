@@ -1,1 +1,114 @@
+/* * {
+  border: 1px solid white;
+} */
 
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 2px solid #202124;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  height: 25px;
+  padding: 2%;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 4%;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: #EA80FC;
+  letter-spacing: 3px;
+}
+
+.formDiv {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+  color: #EA80FC;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.labelinput {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.labelinput:first-child {
+  margin-bottom: 2%;
+}
+
+.labelinputlast {
+  margin-top: 2%;
+}
+
+input {
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 1%;
+  width: 50%;
+  text-align: left;
+}
+
+label {
+  color: #EA80FC;
+  width: 30%;
+  text-align: right;
+}
+
+button {
+  border: 2px solid #EA80FC;
+  border-radius: 5px;
+  color: #B64FC8;
+  background: whitesmoke;
+  font-weight: bold;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+
+.friendsListHeader {
+  margin-top: 5%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  border-bottom: 2px solid #B64FC8;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28%;
+  color: #DBB2FF;
+  color: whitesmoke;
+}
